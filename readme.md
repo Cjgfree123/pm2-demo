@@ -134,10 +134,15 @@ pm2 resurrect # 重新加载保存的应用列表
 pm2 --help 
 ```
 
-## 负载均衡
+#### 负载均衡
 
 ```
 pm2 start app.js -i 3 # 开启三个进程
 
 pm2 start app.js -i max # 根据机器CPU核数，开启对应数目的进程 
 ```
+
+## 实战吐槽
+
+pm2管理node进程，将不会在控制台打印出正常log。  感觉，项目一开始还是用nodemon,方便调试。后期，接入pm2 + node自动化监控平台。
+
